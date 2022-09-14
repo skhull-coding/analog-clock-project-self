@@ -3,9 +3,23 @@ let currentHour = date.getHours();
 let currentMinute = date.getMinutes();
 let currentSecond = date.getSeconds();
 
-let x = currentSecond * 6;
-let y = currentMinute * 6 + ((6/60)*currentSecond);
+var x = currentSecond * 6;
+var y = currentMinute * 6 + ((6/60)*currentSecond);
 var z = currentHour * 30 + ((30/60)*currentMinute + (((30/60)/60)*currentSecond));
+
+function setIt(){   
+    let dateN = new Date();
+    let currentHourN = dateN.getHours();
+    let currentMinuteN = dateN.getMinutes();
+    let currentSecondN = dateN.getSeconds();
+    
+    x = currentSecondN * 6;
+    y = currentMinuteN * 6 + ((6/60)*currentSecondN);
+    z = currentHourN * 30 + ((30/60)*currentMinuteN + (((30/60)/60)*currentSecondN));
+    document.querySelector("#secondHand").style.transform = "rotate(" + x + "deg)";
+    document.querySelector("#minuteHand").style.transform = "rotate(" + y + "deg)";
+    document.querySelector("#hourHand").style.transform = "rotate(" + z + "deg)";
+}
 
 setInterval(function () {
     x += 6/100;
@@ -15,3 +29,5 @@ setInterval(function () {
     document.querySelector("#minuteHand").style.transform = "rotate(" + y + "deg)";
     document.querySelector("#hourHand").style.transform = "rotate(" + z + "deg)";}, 10);
 
+window.addEventListener('focus', setIt);    
+window.addEventListener('blur', setIt);

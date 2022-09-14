@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: 1px green solid;
+}
+
+body{
+    height: calc(100vh - 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockContainer{
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+}
+
+.clockOuter{
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    border-radius: 100%;
+    display: flex;
+}
+
+.clockInner{
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.line{
+    position: relative;
+    width: 2%;
+    height: 98%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lineb{
+    width: 2.5%;
+}
+
+.line .linep1{
+    width: 100%;
+    height: 10%;
+    border-radius: 100vw;
+}
+
+.line:nth-child(2){
+    transform: rotate(30deg);
+    top: -99%;
+}
+
+.line:nth-child(3){
+    transform: rotate(60deg);
+    top: -198%;
+}
+
+.line:nth-child(4){
+    transform: rotate(90deg);
+    top: -297%;
+}
+
+.line:nth-child(5){
+    transform: rotate(120deg);
+    top: -396%;
+}
+
+.line:nth-child(6){
+    transform: rotate(150deg);
+    top: -495%;
+}
+
+.lineClock{
+    width: 100%;
+    height: 100%;
+    border-radius: 100vw;
+}
+
+.hourClock{
+    top: -594%;
+    width: 3.9%;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(45deg);
+    padding: 24% 0;
+}
+
+.minuteClock{
+    transform: rotate(115deg);
+    top: -693%;
+    display: flex;
+    flex-direction: column;
+    padding: 15% 0;
+    width: 2.6%;
+}
+
+.secondClock{
+    transform: rotate(135deg);
+    top: -792%;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 0;
+}
+
+.dot{
+    position: relative;
+    background-color: red;
+    top: -844.5%;
+    margin: auto;
+    height: 5%;
+    width: 5%;
+    border-radius: 100%;
+}

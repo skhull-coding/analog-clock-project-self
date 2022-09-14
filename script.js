@@ -7,20 +7,6 @@ let x = currentSecond * 6;
 let y = currentMinute * 6 + ((6/60)*currentSecond);
 var z = currentHour * 30 + ((30/60)*currentMinute + (((30/60)/60)*currentSecond));
 
-function setIt(){   
-    let dateN = new Date();
-    let currentHourN = date.getHours();
-    let currentMinuteN = date.getMinutes();
-    let currentSecondN = date.getSeconds();
-    
-    let xN = currentSecondN * 6;
-    let yN = currentMinuteN * 6 + ((6/60)*currentSecondN);
-    var zN = currentHourN * 30 + ((30/60)*currentMinuteN + (((30/60)/60)*currentSecondN));
-    document.querySelector("#secondHand").style.transform = "rotate(" + xN + "deg)";
-    document.querySelector("#minuteHand").style.transform = "rotate(" + yN + "deg)";
-    document.querySelector("#hourHand").style.transform = "rotate(" + zN + "deg)";
-}
-
 setInterval(function () {
     x += 6/100;
     y += (6/100/60);

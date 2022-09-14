@@ -1,9 +1,16 @@
+/* Change CClock Size from Here */
+
+.clockOuter{
+    height: 80%;
+    width: 80%;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    border: 1px green solid;
+    /* border: 1px green solid; */
 }
 
 body{
@@ -11,20 +18,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #0a0b16;
 }
 
 .clockContainer{
     height: 60vh;
     width: 60vh;
     display: flex;
+    border: 1px solid #243649;
+    border-radius: 3%;
+    background: linear-gradient(90deg, #102031, #10111b);
 }
 
 .clockOuter{
     margin: auto;
-    height: 80%;
-    width: 80%;
     border-radius: 100%;
     display: flex;
+    background: linear-gradient(-45deg, hsla(180, 100%, 74%, 0.1) 1%, transparent 40%);
 }
 
 .clockInner{
@@ -33,26 +43,29 @@ body{
     width: 90%;
     border-radius: 100%;
     overflow: hidden;
+    box-shadow: 0 0 50px 0px rgb(112, 154, 160);
 }
 
 .line{
     position: relative;
-    width: 2%;
+    width: 1.2%;
     height: 98%;
     margin: 1% auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2% 0;
 }
 
 .lineb{
-    width: 2.5%;
+    width: 2.1%;
 }
 
 .line .linep1{
     width: 100%;
-    height: 10%;
+    height: 5%;
     border-radius: 100vw;
+    background-color: #f9faf8;
 }
 
 .line:nth-child(2){
@@ -86,17 +99,17 @@ body{
     border-radius: 100vw;
 }
 
-.lineClock:nth-child(2){
-    background: transparent;
-}
-
 .hourClock{
     top: -594%;
-    width: 3.9%;
+    width: 3.3%;
     display: flex;
     flex-direction: column;
     transform: rotate(45deg);
     padding: 24% 0;
+}
+
+.hourClock .lineClock{
+    background-color: rgb(255, 187, 0);
 }
 
 .minuteClock{
@@ -104,8 +117,12 @@ body{
     top: -693%;
     display: flex;
     flex-direction: column;
-    padding: 15% 0;
-    width: 2.98%;
+    padding: 16% 0;
+    width: 2.5%;
+}
+
+.minuteClock .lineClock{
+    background-color: rgba(223, 61, 2, 0.973);
 }
 
 .secondClock{
@@ -113,13 +130,21 @@ body{
     top: -792%;
     display: flex;
     flex-direction: column;
-    padding: 7.5% 0;
-    width: 1.5%;
+    padding: 8% 0;
+    width: 0.8%;
+}
+
+.secondClock .lineClock{
+    background-color: cyan;
+}
+
+.lineClock:nth-child(2){
+    background: transparent;
 }
 
 .dot{
     position: relative;
-    background-color: red;
+    background-color: cyan;
     top: -844.5%;
     margin: auto;
     height: 5%;

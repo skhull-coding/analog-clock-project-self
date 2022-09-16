@@ -1,8 +1,8 @@
 /* Change CClock Size from Here */
 
 .clockOuter{
-    height: 68%;
-    width: 68%;
+    height: 70%;
+    width: 70%;
 }
 
 *{
@@ -22,8 +22,8 @@ body{
 }
 
 .clockContainer{
-    height: 60vh;
-    width: 60vh;
+    height: min(60vh, 60vw);
+    width: min(60vh, 60vw);
     display: flex;
     border: 1px solid #243649;
     border-radius: 3%;
@@ -34,16 +34,16 @@ body{
     margin: auto;
     border-radius: 100%;
     display: flex;
-    background: linear-gradient(-45deg, hsla(180, 100%, 74%, 0.1) 1%, transparent 40%);
+    background: linear-gradient(-45deg, hsla(180, 100%, 74%, 0.174) 4%, transparent 40%);
 }
 
 .clockInner{
     margin: auto;
-    height: 90%;
-    width: 90%;
+    height: 85%;
+    width: 85%;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px 0px rgb(112, 154, 160);
+    box-shadow: 0 0 calc(min(60vh, 60vw) * 0.7 * .1287) 0 rgb(112, 154, 160);
 }
 
 .line{
@@ -127,7 +127,7 @@ body{
     top: -792%;
     display: flex;
     flex-direction: column;
-    padding: 8% 0;
+    padding: 12% 0;
     width: 0.8%;
 }
 

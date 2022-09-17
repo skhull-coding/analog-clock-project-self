@@ -30,4 +30,3 @@ setInterval(function () {
     document.querySelector("#hourHand").style.transform = "rotate(" + z + "deg)";}, 10);
 
 window.addEventListener('focus', setIt);    
-window.addEventListener('blur', setIt);

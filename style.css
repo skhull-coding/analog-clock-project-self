@@ -1,8 +1,13 @@
-/* Change CClock Size from Here */
+/* Change Clock Size and Container Size from Here */
+
+:root{
+    --containerSize : 70; /* Container Size - Percentage Size of Body (100%) */
+    --clockSize : 65; /* Clock Size - Percentage Size of Container */
+}
 
 .clockOuter{
-    height: 70%;
-    width: 70%;
+    height: calc(var(--clockSize) * 1%);
+    width : calc(var(--clockSize) * 1%);
 }
 
 *{
@@ -14,7 +19,7 @@
 }
 
 body{
-    height: calc(100vh - 2px);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +27,10 @@ body{
 }
 
 .clockContainer{
-    height: min(60vh, 60vw);
-    width: min(60vh, 60vw);
+    height: min(calc(var(--containerSize) * 1vh), calc(var(--containerSize) * 1vw));
+    width: min(calc(var(--containerSize) * 1vh), calc(var(--containerSize) * 1vw));
     display: flex;
-    border: 1px solid #243649;
+    /* border: 1px solid #243649; */
     border-radius: 3%;
     background: linear-gradient(90deg, #102031, #10111b);
 }
@@ -34,7 +39,7 @@ body{
     margin: auto;
     border-radius: 100%;
     display: flex;
-    background: linear-gradient(-45deg, hsla(180, 100%, 74%, 0.174) 4%, transparent 40%);
+    background: linear-gradient(-45deg, hsla(180, 100%, 74%, 0.174) 2%, transparent 37%);
 }
 
 .clockInner{
@@ -43,7 +48,7 @@ body{
     width: 85%;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 calc(min(60vh, 60vw) * 0.7 * .1287) 0 rgb(112, 154, 160);
+    box-shadow: 0 0 calc(min(calc(var(--containerSize) * 1vh), calc(var(--containerSize) * 1vw)) * var(--clockSize) * .001287) 0 rgb(124, 155, 160);
 }
 
 .line{
